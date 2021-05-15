@@ -19,4 +19,9 @@ The cowin API will only function on Indian IP addresses, so you may have to disa
   <li>Execute the script:</li>
   
   ```python availablity_checker.py ```
-  <li>Enter the necessary information:
+  <li>Enter the necessary information:</br>
+  <img src = "/.images/inputs.png" width = 400></li>
+  </br>
+  <li>Result:</br>
+  <img src = "/.images/results.png" width = 400>
+  </li>
