@@ -25,3 +25,6 @@ The cowin API will only function on Indian IP addresses, so you may have to disa
   <li>Result:</br>
   <img src = "/.images/results.png" width = 400>
   </li>
+  <li>Notifications:</br>
+  <img src = "/.images/notifs.png" width = 400>
+  </li>
