@@ -1,0 +1,4 @@
+requests
+datetime
+notify2
+dbus-python
