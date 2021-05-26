@@ -13,9 +13,9 @@ age = int(input("Enter your age: "))
 # print(cowin.available)
 
 while True:
-    print(cowin.available)
-    print("Fetchig data")
+#     print(cowin.available)
+    print(print(time.strftime("%H:%M:%S"), "Fetchig data")
     cowin.main(DIST_ID, age)
     if cowin.available:
         break
-    time.sleep(60)
+    time.sleep(30)
