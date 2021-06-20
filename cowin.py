@@ -26,7 +26,7 @@ def id_catcher(name, region, STATE_ID):
                 if name == _["district_name"].lower():
                     return _["district_id"]
 
-def main(DIST_ID, age):
+def main(DIST_ID, age, dose):
 
     available = False
     print_flag = 'Y'
@@ -46,7 +46,7 @@ def main(DIST_ID, age):
             if resp_json["sessions"]:
                 if(print_flag=='y' or print_flag=='Y'):
                     for session in resp_json["sessions"]:
-                        if session["min_age_limit"] <= age and int(session["available_capacity"]) > 0:
+                        if session["min_age_limit"] <= age and int(session[f"available_capacity_dose{dose}"]) > 0:
                             available = True
                             notify2.init("Cowin Update")
                             n = notify2.Notification("Cowin slots available at {}!".format(session["name"]))
@@ -57,7 +57,7 @@ def main(DIST_ID, age):
                             print("\t", session["name"])
                             print("\t", session["block_name"])
                             print("\t Price: ", session["fee_type"])
-                            print("\t Available Capacity: ", session["available_capacity"])
+                            print(f"\t Available Capacity for Dose {dose}: ", session[f"available_capacity_dose{dose}"])
                             if(session["vaccine"] != ''):
                                 print("\t Vaccine: ", session["vaccine"])
                             print("\n\n")
